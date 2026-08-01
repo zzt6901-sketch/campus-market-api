@@ -28,7 +28,32 @@
 | 文档 | Knife4j 4.4.0 |
 | 构建 | Maven 3.9+、Java 17+ |
 
-## 快速开始
+## 一键启动
+
+配合 [campus-market-web](https://github.com/zzt6901-sketch/campus-market-web) 使用效果最佳。
+
+### 方式一：Docker
+
+```bash
+docker build -t campus-market-api .
+docker run --rm -p 8080:8080 \
+  -e DB_HOST=host.docker.internal \
+  -e DB_PASSWORD=你的MySQL密码 \
+  -e JWT_SECRET=一个足够长的随机字符串 \
+  campus-market-api
+```
+
+> 更省事的组合方式：克隆前端仓库后，在其目录执行 `docker compose up --build`，
+> 会一次性拉起 MySQL、后端和前端。
+
+### 方式二：本地脚本
+
+克隆 [campus-market-web](https://github.com/zzt6901-sketch/campus-market-web) 作为相邻目录，
+运行其 `start.bat` / `start.sh` 即可自动初始化数据库并启动前后端。
+
+---
+
+## 快速开始（手动）
 
 ### 1. 准备环境
 

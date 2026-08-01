@@ -158,10 +158,10 @@ CREATE TABLE `review` (
 -- 普通用户: zhangsan / 123456, lisi / 123456
 -- 密码都是 BCrypt($2a$10$...) 加密后的 "123456"
 INSERT INTO `user` (`username`, `password`, `nickname`, `phone`, `email`, `school`, `role`, `status`) VALUES
-('admin',    '$2a$10$WRuIQ9iM.0sLnikyzut6AemBPj0LgFq0S0OzXKAAlIKSQ.w5CZOyXO', '演示管理员', NULL, 'admin@example.test',  NULL,          1, 0),
-('zhangsan', '$2a$10$WRuIQ9iM.0sLnikyzut6AemBPj0LgFq0S0OzXKAAlIKSQ.w5CZOyXO', '演示买家',   NULL, 'buyer@example.test',  '示例大学',    0, 0),
-('lisi',     '$2a$10$WRuIQ9iM.0sLnikyzut6AemBPj0LgFq0S0OzXKAAlIKSQ.w5CZOyXO', '演示卖家',   NULL, 'seller@example.test', '示例大学',    0, 0),
-('wangwu',   '$2a$10$WRuIQ9iM.0sLnikyzut6AemBPj0LgFq0S0OzXKAAlIKSQ.w5CZOyXO', '演示用户',   NULL, 'user@example.test',   '示例大学',    0, 0);
+('admin',    '$2a$10$rgRuCZFQgZXVoTsznaIsiOKYS2qJ1heJKshQquGohkL6ZCF0GFyoa', '演示管理员', NULL, 'admin@example.test',  NULL,          1, 0),
+('zhangsan', '$2a$10$rgRuCZFQgZXVoTsznaIsiOKYS2qJ1heJKshQquGohkL6ZCF0GFyoa', '演示买家',   NULL, 'buyer@example.test',  '示例大学',    0, 0),
+('lisi',     '$2a$10$rgRuCZFQgZXVoTsznaIsiOKYS2qJ1heJKshQquGohkL6ZCF0GFyoa', '演示卖家',   NULL, 'seller@example.test', '示例大学',    0, 0),
+('wangwu',   '$2a$10$rgRuCZFQgZXVoTsznaIsiOKYS2qJ1heJKshQquGohkL6ZCF0GFyoa', '演示用户',   NULL, 'user@example.test',   '示例大学',    0, 0);
 
 -- 初始化商品分类
 INSERT INTO `category` (`id`, `name`, `parent_id`, `sort`, `icon`) VALUES
